@@ -1,0 +1,35 @@
+.background-1 {
+  display: block;
+  position: relative;
+  background: black linear-gradient(-45deg, #4d7a8e 0%, rgba(77, 122, 142, 0.738) 19%, rgba(77, 122, 142, 0.541) 34%, rgba(77, 122, 142, 0.382) 47%, rgba(77, 122, 142, 0.278) 56.5%, rgba(77, 122, 142, 0.194) 65%, rgba(77, 122, 142, 0.126) 73%, rgba(77, 122, 142, 0.075) 80.2%, rgba(77, 122, 142, 0.042) 86.1%, rgba(77, 122, 142, 0.021) 91%, rgba(77, 122, 142, 0.008) 95.2%, rgba(77, 122, 142, 0.002) 98.2%, rgba(77, 122, 142, 0) 100%); }
+
+.background-1:after {
+  content: "";
+  position: absolute;
+  background: url("../media/gplay.png") repeat;
+  opacity: 0.16;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1; }
+
+.background-2 {
+  display: block;
+  position: relative;
+  background: #c79d08 linear-gradient(45deg, #f6f5f5 0%, rgba(246, 245, 245, 0.738) 19%, rgba(246, 245, 245, 0.541) 34%, rgba(246, 245, 245, 0.382) 47%, rgba(246, 245, 245, 0.278) 56.5%, rgba(246, 245, 245, 0.194) 65%, rgba(246, 245, 245, 0.126) 73%, rgba(246, 245, 245, 0.075) 80.2%, rgba(246, 245, 245, 0.042) 86.1%, rgba(246, 245, 245, 0.021) 91%, rgba(246, 245, 245, 0.008) 95.2%, rgba(246, 245, 245, 0.002) 98.2%, rgba(246, 245, 245, 0) 100%); }
+
+.background-2:after {
+  content: "";
+  position: absolute;
+  background: url("../media/argyle.png") repeat;
+  opacity: 0.16;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1; }
+
+/*# sourceMappingURL=backgrounds.css.map */

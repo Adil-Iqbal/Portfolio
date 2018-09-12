@@ -1,0 +1,63 @@
+// Color palette
+$darkest: #0a1612;
+$dark: #1a2930;
+$medium: #29414c;
+$light: #f7ce3e;
+$lightest: #c5c1c0;
+
+@mixin scrimGradient($startColor: "black", $stopColor: "white", $direction: "to bottom") {
+    $scrimCoordinates: (0: 1, 19: 0.738, 34: 0.541, 47: 0.382, 56.5: 0.278, 65: 0.194, 73: 0.126, 80.2: 0.075, 86.1: 0.042, 91: 0.021, 95.2: 0.008, 98.2: 0.002, 100: 0);
+
+    $hue: hue($startColor);
+    $saturation: saturation($startColor);
+    $lightness: lightness($startColor);
+    $stops: ();
+
+    @each $colorStop,
+    $alphaValue in $scrimCoordinates {
+        $stop: hsla($hue, $saturation, $lightness, $alphaValue) percentage($colorStop / 100);
+        $stops: append($stops, $stop, comma);
+    }
+
+    background: $stopColor linear-gradient(unquote($direction), $stops);
+}
+
+$text_color: $light;
+
+.background-1 {
+    display: block;
+    position: relative;
+    @include scrimGradient(lighten($medium, 20%), darken($dark, 20%), -45deg);
+}
+
+.background-1:after {
+    content: "";
+    position: absolute;
+    background: url('../media/gplay.png') repeat;
+    opacity: 0.16;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.background-2 {
+    display: block;
+    position: relative;
+    @include scrimGradient(lighten($lightest, 20%), darken($light, 20%), 45deg);
+}
+
+.background-2:after {
+    content: "";
+    position: absolute;
+    background: url('../media/argyle.png') repeat;
+    opacity: 0.16;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
