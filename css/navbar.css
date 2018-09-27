@@ -34,13 +34,13 @@ li a {
   color: #c5c1c0;
   transition: 0.1s ease-in-out; }
 
-.navBarReady {
+.nav-Ready {
   top: 1px; }
 
-.navActive {
+.nav-Active {
   color: #f7ce3e !important; }
 
-#navOverlay {
+#nav-Overlay {
   position: fixed;
   display: none;
   width: 100%;
@@ -84,7 +84,7 @@ li a {
       border-left-width: 12px;
       border-left-color: #c5c1c0; }
 
-  #navToggle {
+  #nav-Toggle {
     background: linear-gradient(90deg, #3c5f6f, #437f9b);
     box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3);
     display: flex;
@@ -101,10 +101,10 @@ li a {
     border-radius: 0 0 8px 0;
     color: #c5c1c0;
     font-size: 30px; }
-    #navToggle:hover {
+    #nav-Toggle:hover {
       background: linear-gradient(90deg, #4e7b90, #599ab8); }
 
-  .navActive {
+  .nav-Active {
     background: linear-gradient(-90deg, #1b2a31, #274c5d) !important;
     box-shadow: inset 12px 0 10px -15px #000, inset -12px 0 10px -15px #000 !important;
     border-left-color: #f7ce3e !important; } }
@@ -133,11 +133,11 @@ li a {
       border-top-style: solid;
       border-top-color: #dddddd; }
 
-  #navOverlay,
-  #navToggle {
+  #nav-Overlay,
+  #nav-Toggle {
     display: none; }
 
-  .navActive {
+  .nav-Active {
     background: linear-gradient(180deg, #1b2a31, #264959) !important;
     box-shadow: inset 12px 0 10px -15px #000, inset -12px 0 10px -15px #000 !important;
     border-top-color: #f7ce3e !important;

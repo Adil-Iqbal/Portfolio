@@ -11,28 +11,28 @@ function toggleMobileMode() {
 
 function toggleNavBehavior() {
     if (mobileMode) {
-        $('nav').removeClass('navBarReady');
+        $('nav').removeClass('nav-Ready');
         if (mobileMenuPosition) {
             liftMobileMenu()
         }
     } else {
         setTimeout(() => {
-            $('nav').addClass('navBarReady');
+            $('nav').addClass('nav-Ready');
         }, 1500)
     }
 }
 
 function dropMobileMenu() {
-    $('#navToggle').html('<i class="fas fa-times navToggle"></i>');
-    $('nav').addClass('navBarReady');
-    $('#navOverlay').css('display', 'block');
+    $('#nav-Toggle').html('<i class="fas fa-times nav-Toggle"></i>');
+    $('nav').addClass('nav-Ready');
+    $('#nav-Overlay').css('display', 'block');
     mobileMenuPosition = true;
 }
 
 function liftMobileMenu() {
-    $('#navToggle').html('<i class="fas fa-bars navToggle"></i>');
-    $('nav').removeClass('navBarReady');
-    $('#navOverlay').css('display', 'none');
+    $('#nav-Toggle').html('<i class="fas fa-bars nav-Toggle"></i>');
+    $('nav').removeClass('nav-Ready');
+    $('#nav-Overlay').css('display', 'none');
     mobileMenuPosition = false;
 }
 
@@ -49,18 +49,13 @@ $(document).ready(function() {
         let id = event.target.id
         let classes = event.target.className.split(' ');
         // Mobile Only
-        // Toggle between active and inactive mobile menu.
-        if (mobileMode && (id === 'navToggle' || classes.includes('navToggle'))) {
+        if (mobileMode && (id === 'nav-Toggle' || classes.includes('nav-Toggle'))) {
+            // Toggle between active and inactive mobile menu.
             if (mobileMenuPosition) {
                 liftMobileMenu();
             } else {
                 dropMobileMenu();
             }
-        }
-        // Nav Links
-        if (classes.includes('navLink')) {
-            $('.navLink').removeClass('navActive');
-            $(event.target).addClass('navActive');
         }
     });
 })

@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700,900");
+
+// Color palette
+$darkest: #0a1612;
+$dark: #1a2930;
+$medium: #29414c;
+$light: #f7ce3e;
+$lightest: #c5c1c0;
+
+// Fancy "Download fancy_resume" Button
+$anim-text-offset: 1em;
+
+.fancy_resume {
+    touch-callout: none;
+    user-select: none;
+    display: inline-block;
+    border: .2em solid;
+    border-radius: 500px;
+    margin-top: 3em;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    opacity: 0.6;
+    color: $light;
+    z-index: 2;
+
+    &__text {
+        display: block;
+        padding: 1em 2em;
+        text-transform: uppercase;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bold;
+        z-index: 2;
+
+        &:before {
+            content: attr(title);
+        }
+
+        &--bis {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transform: translateX(-1 * $anim-text-offset);
+            opacity: 0;
+            text-transform: uppercase;
+            font-family: 'Work Sans', sans-serif;
+            font-weight: bold;
+            z-index: 2;
+            padding: 1em 2em;
+        }
+    }
+
+    &__mask {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $light;
+        transform: translateX(-100%) rotate(45deg);
+        transition: all 0.3s;
+        z-index: 2;
+    }
+}
+
+.fancy_resume:hover {
+    opacity: 1;
+
+    .fancy_resume__text {
+        animation: fx-text .3s ease-out;
+        z-index: 2;
+
+        &--bis {
+            animation: fx-text-bis .3s ease-out;
+            z-index: 2;
+        }
+    }
+
+    .fancy_resume__mask {
+        animation: fx-mask .3s ease-out;
+        z-index: 2;
+    }
+}
+
+.fancy_resume:active {
+    opacity: 1;
+    background: $light;
+    color: darken($dark, 10%);
+    z-index: 2;
+}
+
+@keyframes fx-mask {
+    0% {
+        transform: translateX(-100%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(100%) rotate(45deg);
+    }
+}
+
+@keyframes fx-text {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX($anim-text-offset);
+        opacity: 0;
+    }
+}
+
+@keyframes fx-text-bis {
+    0% {
+        transform: translateX(-1 * $anim-text-offset);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

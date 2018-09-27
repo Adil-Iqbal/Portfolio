@@ -2,11 +2,14 @@ let globalOrigin;
 
 $(document).ready(function() {
     $('#fullpage').fullpage({
-        controlArrows: false,
+        controlArrows: true,
         anchors: ["resume", "about", "soft", "portfolio", "contact"],
+        scrollOverflow: true,
+        onLeave: function() {
+            $('.nav-Link').removeClass('nav-Active');
+        },
         afterLoad: function(origin) {
-            $('.navLink').removeClass('navActive');
-            $('.' + origin).addClass('navActive');
+            $('.' + origin).addClass('nav-Active');
         }
     });
 });

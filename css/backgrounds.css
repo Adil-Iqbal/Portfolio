@@ -1,9 +1,9 @@
-.background-1 {
+.bg-theme-1 {
   display: block;
   position: relative;
-  background: black linear-gradient(-45deg, #4d7a8e 0%, rgba(77, 122, 142, 0.738) 19%, rgba(77, 122, 142, 0.541) 34%, rgba(77, 122, 142, 0.382) 47%, rgba(77, 122, 142, 0.278) 56.5%, rgba(77, 122, 142, 0.194) 65%, rgba(77, 122, 142, 0.126) 73%, rgba(77, 122, 142, 0.075) 80.2%, rgba(77, 122, 142, 0.042) 86.1%, rgba(77, 122, 142, 0.021) 91%, rgba(77, 122, 142, 0.008) 95.2%, rgba(77, 122, 142, 0.002) 98.2%, rgba(77, 122, 142, 0) 100%); }
+  background: #05080a linear-gradient(-45deg, #4d7a8e 0%, rgba(77, 122, 142, 0.738) 19%, rgba(77, 122, 142, 0.541) 34%, rgba(77, 122, 142, 0.382) 47%, rgba(77, 122, 142, 0.278) 56.5%, rgba(77, 122, 142, 0.194) 65%, rgba(77, 122, 142, 0.126) 73%, rgba(77, 122, 142, 0.075) 80.2%, rgba(77, 122, 142, 0.042) 86.1%, rgba(77, 122, 142, 0.021) 91%, rgba(77, 122, 142, 0.008) 95.2%, rgba(77, 122, 142, 0.002) 98.2%, rgba(77, 122, 142, 0) 100%); }
 
-.background-1:after {
+.bg-theme-1:after {
   content: "";
   position: absolute;
   background: url("../media/gplay.png") repeat;
@@ -15,16 +15,50 @@
   right: 0;
   z-index: 1; }
 
-.background-2 {
+.bg-theme-3 {
   display: block;
   position: relative;
-  background: #c79d08 linear-gradient(45deg, #f6f5f5 0%, rgba(246, 245, 245, 0.738) 19%, rgba(246, 245, 245, 0.541) 34%, rgba(246, 245, 245, 0.382) 47%, rgba(246, 245, 245, 0.278) 56.5%, rgba(246, 245, 245, 0.194) 65%, rgba(246, 245, 245, 0.126) 73%, rgba(246, 245, 245, 0.075) 80.2%, rgba(246, 245, 245, 0.042) 86.1%, rgba(246, 245, 245, 0.021) 91%, rgba(246, 245, 245, 0.008) 95.2%, rgba(246, 245, 245, 0.002) 98.2%, rgba(246, 245, 245, 0) 100%); }
+  background: black linear-gradient(45deg, #3b5d6d 0%, rgba(59, 93, 109, 0.738) 19%, rgba(59, 93, 109, 0.541) 34%, rgba(59, 93, 109, 0.382) 47%, rgba(59, 93, 109, 0.278) 56.5%, rgba(59, 93, 109, 0.194) 65%, rgba(59, 93, 109, 0.126) 73%, rgba(59, 93, 109, 0.075) 80.2%, rgba(59, 93, 109, 0.042) 86.1%, rgba(59, 93, 109, 0.021) 91%, rgba(59, 93, 109, 0.008) 95.2%, rgba(59, 93, 109, 0.002) 98.2%, rgba(59, 93, 109, 0) 100%); }
 
-.background-2:after {
+.bg-theme-3:after {
   content: "";
   position: absolute;
-  background: url("../media/argyle.png") repeat;
-  opacity: 0.16;
+  background: url("../media/star.png") repeat;
+  opacity: 0.50;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1; }
+
+.bg-lightestCross {
+  display: block;
+  position: relative;
+  background: #948d8b linear-gradient(45deg, #f6f5f5 0%, rgba(246, 245, 245, 0.738) 19%, rgba(246, 245, 245, 0.541) 34%, rgba(246, 245, 245, 0.382) 47%, rgba(246, 245, 245, 0.278) 56.5%, rgba(246, 245, 245, 0.194) 65%, rgba(246, 245, 245, 0.126) 73%, rgba(246, 245, 245, 0.075) 80.2%, rgba(246, 245, 245, 0.042) 86.1%, rgba(246, 245, 245, 0.021) 91%, rgba(246, 245, 245, 0.008) 95.2%, rgba(246, 245, 245, 0.002) 98.2%, rgba(246, 245, 245, 0) 100%); }
+
+.bg-lightestCross:after {
+  content: "";
+  position: absolute;
+  background: url("../media/cross.png") repeat;
+  opacity: 0.9;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1; }
+
+.bg-theme-2 {
+  display: block;
+  position: relative;
+  background: #f7ce3e; }
+
+.bg-theme-2:after {
+  content: "";
+  position: absolute;
+  background: url("../media/diamonds.png") repeat;
+  opacity: 0.90;
   overflow: hidden;
   top: 0;
   bottom: 0;

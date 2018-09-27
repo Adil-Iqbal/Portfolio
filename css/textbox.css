@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700,900");
+.tb-theme-2, .tb-theme-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  z-index: 2; }
+
+.tb-theme-2 .title, .tb-theme-3 .title {
+  padding-bottom: 15px;
+  font-size: 1.8em;
+  font-family: 'Raleway', 'Verdana';
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.36em;
+  text-align: center;
+  z-index: 2; }
+
+.tb-theme-2 .body, .tb-theme-3 .body {
+  border-top-style: solid;
+  border-top-width: 7px;
+  padding: 15px;
+  font-size: 1.2em;
+  font-family: 'Raleway', 'Verdana';
+  font-weight: 600;
+  z-index: 2; }
+
+.tb-theme-2 .title {
+  color: #1a2930; }
+.tb-theme-2 .body {
+  color: #1a2930;
+  border-color: #1a2930;
+  background: #c5c1c0; }
+
+.tb-theme-3 .title {
+  color: #f7ce3e; }
+.tb-theme-3 .body {
+  color: #f7ce3e;
+  border-color: #f7ce3e; }
+
+/*# sourceMappingURL=textbox.css.map */

@@ -24,13 +24,13 @@ $lightest: #c5c1c0;
 
 $text_color: $light;
 
-.background-1 {
+.bg-theme-1 {
     display: block;
     position: relative;
-    @include scrimGradient(lighten($medium, 20%), darken($dark, 20%), -45deg);
+    @include scrimGradient(lighten($medium, 20%), darken($medium, 20%), -45deg);
 }
 
-.background-1:after {
+.bg-theme-1:after {
     content: "";
     position: absolute;
     background: url('../media/gplay.png') repeat;
@@ -43,17 +43,55 @@ $text_color: $light;
     z-index: 1;
 }
 
-.background-2 {
+.bg-theme-3 {
     display: block;
     position: relative;
-    @include scrimGradient(lighten($lightest, 20%), darken($light, 20%), 45deg);
+    @include scrimGradient(lighten($medium, 10%), darken($medium, 30%), 45deg);
 }
 
-.background-2:after {
+.bg-theme-3:after {
     content: "";
     position: absolute;
-    background: url('../media/argyle.png') repeat;
-    opacity: 0.16;
+    background: url('../media/star.png') repeat;
+    opacity: 0.50;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.bg-lightestCross {
+    display: block;
+    position: relative;
+    @include scrimGradient(lighten($lightest, 20%), darken($lightest, 20%), 45deg);
+}
+
+.bg-lightestCross:after {
+    content: "";
+    position: absolute;
+    background: url('../media/cross.png') repeat;
+    opacity: 0.9;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.bg-theme-2 {
+    display: block;
+    position: relative;
+    background: $light;
+}
+
+.bg-theme-2:after {
+    content: "";
+    position: absolute;
+    background: url('../media/diamonds.png') repeat;
+    opacity: 0.90;
     overflow: hidden;
     top: 0;
     bottom: 0;

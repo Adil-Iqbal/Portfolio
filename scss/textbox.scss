@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700,900");
+
+// Color palette
+$darkest: #0a1612;
+$dark: #1a2930;
+$medium: #29414c;
+$light: #f7ce3e;
+$lightest: #c5c1c0;
+
+// Parent Styling:
+
+%shared-textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    z-index: 2;
+}
+
+%shared-title {
+    padding-bottom: 15px;
+    $fontsize: 1.8em;
+    $letterspacing: $fontsize * 0.2;
+    font-size: $fontsize;
+    font-family: 'Raleway', 'Verdana';
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: $letterspacing;
+    text-align: center;
+    z-index: 2;
+}
+
+%shared-body {
+    border-top-style: solid;
+    border-top-width: 7px;
+    padding: 15px;
+    font-size: 1.2em;
+    font-family: 'Raleway', 'Verdana';
+    font-weight: 600;
+    z-index: 2;
+}
+
+// Theme-2 Styling:
+
+$fgColor: $dark;
+
+.tb-theme-2 {
+    @extend %shared-textbox;
+    .title {
+        @extend %shared-title;
+        color: $fgColor;
+    }
+    .body {
+        @extend %shared-body;
+        color: $fgColor;
+        border-color: $fgColor;
+        background: $lightest; 
+      }
+}
+
+// Theme-3 Styling:
+
+$bgColor: $lightest;
+$fgColor: $dark;
+
+.tb-theme-3 {
+    @extend %shared-textbox;
+    .title {
+        @extend %shared-title;
+        color: $light;
+    }
+    .body {
+        @extend %shared-body;
+        color: $light;
+        border-color: $light;
+        // background: $lightest; 
+      }
+}

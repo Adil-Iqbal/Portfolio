@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway");
+// You will find more navbar related code in /script/fullpage.js.
 
+@import url("https://fonts.googleapis.com/css?family=Raleway");
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700,900");
 
 // Color palette
@@ -91,15 +92,15 @@ li a {
     transition: 0.1s ease-in-out;
 }
 
-.navBarReady {
+.nav-Ready {
     top: 1px;
 }
 
-.navActive {
+.nav-Active {
     color: $light !important;
 }
 
-#navOverlay {
+#nav-Overlay {
     position: fixed;
     display: none;
     width: 100%;
@@ -159,7 +160,7 @@ li a {
         }
     }
 
-    #navToggle {
+    #nav-Toggle {
         @include dynamicGradient(lighten($bgColor, 8%), $dynamicEffect, 90deg);
 
         box-shadow: inset 0 0 100px hsla(0, 0%, 0%, 0.3);
@@ -183,7 +184,7 @@ li a {
         }
     }
 
-    .navActive {
+    .nav-Active {
         @include dynamicGradient($bgColorActive, $dynamicEffect * 1.1, -90deg, $important: true);
 
         box-shadow: inset 12px 0 10px -15px #000, inset -12px 0 10px -15px #000 !important;
@@ -224,12 +225,12 @@ li a {
         }
     }
 
-    #navOverlay,
-    #navToggle {
+    #nav-Overlay,
+    #nav-Toggle {
         display: none;
     }
 
-    .navActive {
+    .nav-Active {
         @include dynamicGradient($bgColorActive, $dynamicEffect, 180deg, $important: true);
 
         box-shadow: inset 12px 0 10px -15px #000, inset -12px 0 10px -15px #000 !important;

@@ -11,31 +11,99 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css" integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullpage.min.css" />
 
+    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/backgrounds.css" />
+    <link rel="stylesheet" href="css/resumeButton.css" />
+    <link rel="stylesheet" href="css/textbox.css" />
 </head>
 
 <body>
-    <div id="navOverlay"></div>
+    <div id="nav-Overlay"></div>
     <nav>
         <ul>
-            <li><a href="#resume" data-menuanchor="resume" class='resume navLink'>Resume</a></li>
-            <li><a href="#about" data-menuanchor="about" class='about navLink'>About</a></li>
-            <li><a href="#soft" data-menuanchor="soft" class='soft navLink'>Soft Skills</a></li>
-            <li><a href="#portfolio" data-menuanchor="portfolio" class='portfolio navLink'>Portfolio</a></li>
-            <li><a href="#contact" data-menuanchor="contact" class='contact navLink'>Contact</a></li>
+            <li><a href="#resume" data-menuanchor="resume" class='resume nav-Link'>Resume</a></li>
+            <li><a href="#about" data-menuanchor="about" class='about nav-Link'>About</a></li>
+            <li><a href="#soft" data-menuanchor="soft" class='soft nav-Link'>Soft Skills</a></li>
+            <li><a href="#portfolio" data-menuanchor="portfolio" class='portfolio nav-Link'>Portfolio</a></li>
+            <li><a href="#contact" data-menuanchor="contact" class='contact nav-Link'>Contact</a></li>
         </ul>
-        <div id="navToggle"><i class="fas fa-bars navToggle"></i></div>
+        <div id="nav-Toggle"><i class="fas fa-bars nav-Toggle"></i></div>
     </nav>
 
     <div id="fullpage">
-        <div class="section background-1">
+
+        <!-- Landing Page -->
+        <div class="section bg-theme-1">
             <img srcset="media/signature.svg" alt="Signature" class="signature img-fluid">
+            <div class="fancy_resume">
+                <span class="fancy_resume__mask"></span>
+                <span class="fancy_resume__text">download resume</span>
+                <span class="fancy_resume__text--bis">download resume</span>
+            </div>
         </div>
-        <div class="section background-2"></div>
-        <div class="section background-1"></div>
-        <div class="section background-2"></div>
-        <div class="section background-1"></div>
+
+        <!-- About Section -->
+        <div class="section bg-theme-2">
+            <div class="tb-theme-2">
+                <div class="title">About</div>
+                <div class="body">
+                    <p>I am a rehab specialist who has 5 years of experience working in the healthcare industry. Over the last few years, I've become well aquainted with the nuances collaborating in a highly technical field. Though I have the utmost reverence for my work in healthcare, I feel that its time to take on new challenges.</p>
+                    <p>My passion lies in problem solving, so I'm switching gears to pursue software development. I am currently devouring everything Javascript. I've recently completed the front-end track at freeCodeCamp and now moving on to learn REACT.js.</p>
+                    <p>When I'm not coding, I enjoy hiking, camping, and spending time with my family.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Soft Skills Section -->
+        <div class="section bg-theme-3">
+
+            <!-- Summary -->
+            <div class="slide" data-anchor="summary">
+                <div class="tb-theme-3">
+                    <div class="title">Soft Skills</div>
+                    <div class="body">
+                        <p>Though I spend most of my time acquiring programming knowledge; I do so with the understanding that far more is required to be a successful developer. In fact, many times, it's the "soft skills" that can make the biggest difference. So instead of listing technical skills (check out the portfolio for that!), allow me to discuss some of the soft skills that I have been praised for.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Work Ethic -->
+            <div class="slide" data-anchor="workethic">
+                    <div class="tb-theme-3">
+                        <div class="title">Work Ethic</div>
+                        <div class="body">
+                                <p>For me, work ethic is primarily comprised of integrity and perseverence. I define integrity as being transparent and dependable--no guesswork, no reading between the lines. And for me, perseverance pushes me through those times when even the slightest amount of progress requires an immense effort. Work ethic is more than just drudging along; it's a commitment to the process and the final product.</p>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- Communication -->
+            <div class="slide" data-anchor="communication">
+                    <div class="tb-theme-3">
+                        <div class="title">Communication</div>
+                        <div class="body">
+                                <p>Superb communication skills are essential whether I'm working with someone across the globe or across the hall. I have worked as a part of a multi-disciplinary healthcare team for years, and I have found that excellent communication begins simply with listening; slowing down to fully digest what someone is saying saves a ton of time.</p>
+                                <p>When it's time to speak up, it is critical to do so in a way that is tailored and concise. Taking a moment to stand in the other person's shoes can provide for a conversation that is beneficial for myself, the technical team member, the customer, and ultimately, the corporate stakeholder.</p>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- Curiosity -->
+            <div class="slide" data-anchor="curiosity">
+                    <div class="tb-theme-3">
+                        <div class="title">Curiosity</div>
+                        <div class="body">
+                                <p>I really enjoy being challenged by new concepts and unfamiliar ways of thinking. I love finding out the "why" behind the "how."</p>
+                                <p>Above all, I love the excitement that I feel when a multitude of intricacies click together to form a deeper understanding; that eureka moment! Once I've wrapped my mind around a new concept, I love how a task, that was once so daunting, can now be tackled by weaving what I've learned with what I already know.</p>
+                                <p>For me, there is a certain <i>joy</i> that comes with finding innovative solutions to difficult problems.</p>
+                            </div>
+                    </div>
+            </div>
+
+        </div>
+        <div class="section bg-lightestCross"></div>
+        <div class="section bg-mediumTriangles"></div>
     </div>
 
     <script defer type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
