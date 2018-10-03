@@ -43,6 +43,25 @@ $text_color: $light;
     z-index: 1;
 }
 
+.bg-theme-2 {
+    display: block;
+    position: relative;
+    background: $light;
+}
+
+.bg-theme-2:after {
+    content: "";
+    position: absolute;
+    background: url('../media/diamonds.png') repeat;
+    opacity: 0.90;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
 .bg-theme-3 {
     display: block;
     position: relative;
@@ -62,13 +81,13 @@ $text_color: $light;
     z-index: 1;
 }
 
-.bg-lightestCross {
+.bg-theme-4 {
     display: block;
     position: relative;
     @include scrimGradient(lighten($lightest, 20%), darken($lightest, 20%), 45deg);
 }
 
-.bg-lightestCross:after {
+.bg-theme-4:after {
     content: "";
     position: absolute;
     background: url('../media/cross.png') repeat;
@@ -78,24 +97,5 @@ $text_color: $light;
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 1;
-}
-
-.bg-theme-2 {
-    display: block;
-    position: relative;
-    background: $light;
-}
-
-.bg-theme-2:after {
-    content: "";
-    position: absolute;
-    background: url('../media/diamonds.png') repeat;
-    opacity: 0.90;
-    overflow: hidden;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
+    z-index: 0;
 }

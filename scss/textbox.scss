@@ -78,3 +78,31 @@ $fgColor: $dark;
         // background: $lightest; 
       }
 }
+
+// Theme-4 Styling:
+
+$fgColor: $medium;
+
+.tb-theme-4 {
+    @extend %shared-textbox;
+    max-width: 50%;
+    margin: 20px;
+    .title {
+        @extend %shared-title;
+        color: $fgColor;
+        $fontsize: 1.6em;
+        $letterspacing: $fontsize * 0.1;
+        letter-spacing: $letterspacing;
+        font-size: $fontsize;
+    }
+    .body {
+        @extend %shared-body;
+        color: $fgColor;
+        border-color: $fgColor;
+        background: $lightest; 
+    }
+    h1 {
+        font-size: 1.2em;
+        text-transform: uppercase;
+    }
+}

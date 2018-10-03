@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700,900");
-.tb-theme-2, .tb-theme-3 {
+.tb-theme-2, .tb-theme-3, .tb-theme-4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,7 +8,7 @@
   width: 70%;
   z-index: 2; }
 
-.tb-theme-2 .title, .tb-theme-3 .title {
+.tb-theme-2 .title, .tb-theme-3 .title, .tb-theme-4 .title {
   padding-bottom: 15px;
   font-size: 1.8em;
   font-family: 'Raleway', 'Verdana';
@@ -18,7 +18,7 @@
   text-align: center;
   z-index: 2; }
 
-.tb-theme-2 .body, .tb-theme-3 .body {
+.tb-theme-2 .body, .tb-theme-3 .body, .tb-theme-4 .body {
   border-top-style: solid;
   border-top-width: 7px;
   padding: 15px;
@@ -39,5 +39,20 @@
 .tb-theme-3 .body {
   color: #f7ce3e;
   border-color: #f7ce3e; }
+
+.tb-theme-4 {
+  max-width: 50%;
+  margin: 20px; }
+  .tb-theme-4 .title {
+    color: #29414c;
+    letter-spacing: 0.16em;
+    font-size: 1.6em; }
+  .tb-theme-4 .body {
+    color: #29414c;
+    border-color: #29414c;
+    background: #c5c1c0; }
+  .tb-theme-4 h1 {
+    font-size: 1.2em;
+    text-transform: uppercase; }
 
 /*# sourceMappingURL=textbox.css.map */

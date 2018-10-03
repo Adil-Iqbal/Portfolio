@@ -4,4 +4,24 @@
   justify-content: center;
   align-items: center; }
 
+.fp-tableCell > .project {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 95%;
+  z-index: 2; }
+
+.fp-tableCell > .project > * {
+  z-index: 2; }
+
+.fp-tableCell > .project > a > img {
+  border-style: solid;
+  border-color: #29414c;
+  border-width: 2px;
+  max-width: 100%;
+  height: auto;
+  z-index: 2; }
+
 /*# sourceMappingURL=main.css.map */

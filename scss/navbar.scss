@@ -57,7 +57,7 @@ nav {
     transition: top 0.25s ease-in-out;
 }
 
-ul {
+nav > ul {
     display: flex;
     justify-content: space-around;
     align-items: space-around;
@@ -68,7 +68,7 @@ ul {
     margin: 0;
 }
 
-li {
+nav > ul > li {
     display: inline;
 
     // text-align: center;
@@ -76,7 +76,7 @@ li {
     margin: 0;
 }
 
-li a {
+nav > ul > li > a {
     display: block;
     padding: 0;
     margin: 0;
@@ -123,16 +123,16 @@ li a {
         top: -255px;
     }
 
-    ul {
+    nav > ul {
         flex-direction: column;
         background: darken($medium, 10%);
     }
 
-    li {
+    nav > ul > li {
         text-align: left;
     }
 
-    li > a {
+    nav > ul > li > a {
         @include dynamicGradient($bgColor, $dynamicEffect, -90deg, $image: false);
 
         box-shadow: inset 0 0 100px hsla(0, 0%, 0%, 0.3);
@@ -197,15 +197,15 @@ li a {
         top: -30px;
     }
 
-    ul {
+    nav > ul {
         flex-direction: row;
     }
 
-    li {
+    nav > ul > li {
         text-align: center;
     }
 
-    li a {
+    nav > ul > li > a {
         @include dynamicGradient($bgColor, $dynamicEffect, 180deg);
 
         font-size: 11px;
