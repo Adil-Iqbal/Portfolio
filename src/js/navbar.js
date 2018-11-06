@@ -46,8 +46,20 @@ $(document).ready(function() {
     });
 
     $(document).on('click', event => {
-        let id = event.target.id
-        let classes = event.target.className.split(' ');
+        if (event === undefined) {
+            return;
+        }
+        let target = event.target;
+        let id, classes;
+        if (target.className instanceof SVGAnimatedString) {
+            // If you click on the icon, get the parent's data.
+            id = target.parentElement.id;
+            classes = target.parentElement.className.baseVal.split(' ');
+        } else {
+            // If you click on the parent, get the parent's data.
+            id = target.id;
+            classes = target.className.split(' ');
+        }
         // Mobile Only
         if (mobileMode && (id === 'nav-Toggle' || classes.includes('nav-Toggle'))) {
             // Toggle between active and inactive mobile menu.

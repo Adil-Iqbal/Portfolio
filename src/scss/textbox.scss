@@ -21,7 +21,7 @@ $lightest: #c5c1c0;
 
 %shared-title {
     padding-bottom: 15px;
-    $fontsize: 1.8em;
+    $fontsize: 1.6em;
     $letterspacing: $fontsize * 0.2;
     font-size: $fontsize;
     font-family: 'Raleway', 'Verdana';
@@ -29,6 +29,7 @@ $lightest: #c5c1c0;
     text-transform: uppercase;
     letter-spacing: $letterspacing;
     text-align: center;
+    padding-top: 30px;
     z-index: 2;
 }
 
@@ -40,6 +41,31 @@ $lightest: #c5c1c0;
     font-family: 'Raleway', 'Verdana';
     font-weight: 600;
     z-index: 2;
+}
+
+%shared-contact-icons {
+    display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: auto;
+}
+
+@media only screen and (max-width: 499px) {
+    %shared-title {
+        $fontsize: 1.5em;
+        $letterspacing: $fontsize * 0.15;
+        font-size: $fontsize;
+        letter-spacing: $letterspacing;
+        padding-top: 55px;
+    }
+
+    %shared-body {
+        border-top-width: 5px;
+        padding: 15px;
+        font-size: 1em;       
+        font-weight: 600;
+    }
 }
 
 // Theme-2 Styling:
@@ -90,10 +116,6 @@ $fgColor: $medium;
     .title {
         @extend %shared-title;
         color: $fgColor;
-        $fontsize: 1.6em;
-        $letterspacing: $fontsize * 0.1;
-        letter-spacing: $letterspacing;
-        font-size: $fontsize;
     }
     .body {
         @extend %shared-body;
@@ -104,5 +126,54 @@ $fgColor: $medium;
     h1 {
         font-size: 1.2em;
         text-transform: uppercase;
+    }
+}
+
+@media only screen and (max-width: 699px) {
+    .tb-theme-4 {
+        max-width: 90%;
+        .title {
+            padding-top: 0px;
+        }
+    }
+}
+
+// Theme-5 Styling:
+
+.tb-theme-5 {
+    @extend %shared-textbox;
+    .title {
+        @extend %shared-title;
+        color: $lightest;
+    }
+    .body {
+        @extend %shared-body;
+        color: $lightest;
+        border-color: $lightest;
+        // background: $lightest; 
+      }
+    .contact-icons {
+        @extend %shared-contact-icons;
+        a .icon{
+            // @extend %shared-contact-icons;
+            // flex-direction: column;
+            text-align: center;
+            &:link {
+                color: $lightest;
+                text-decoration: none;
+            }
+            &:hover {
+                color: $light;
+                text-decoration: none;
+            }
+            &:active {
+                color: white;
+                text-decoration: none;
+            }
+            &:visited * {
+                color: darken($lightest, 10%);
+                text-decoration: none;
+            }
+        }
     }
 }

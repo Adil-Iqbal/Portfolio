@@ -1,0 +1,54 @@
+.section .fp-tableCell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section .fp-tableCell .fp-scrollable .fp-scroller {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signature {
+    max-width: 100%;
+    height: auto;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 88%;
+    z-index: 2;
+}
+
+.project > * {
+    z-index: 2;
+    flex-basis: 50%;
+}
+
+.project > a > img {
+    border-style: solid;
+    border-color: #29414c;
+    border-width: 2 px; 
+    max-width: 100%;
+    height: auto;
+    z-index: 2;
+}
+
+@media only screen and (max-width: 699px) {
+    .project {
+        flex-direction: column;
+    }
+
+    .project > a {
+        max-width: 70%;
+        text-align: center;
+        padding-top: 55px;
+    }
+
+}
