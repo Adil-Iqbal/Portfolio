@@ -1,6 +1,6 @@
-let globalOrigin;
+import { mobileMenuPosition, liftMobileMenu } from "./navbar";
 
-$(document).ready(function() {
+export function startFullpage() {
     $('#fullpage').fullpage({
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
         controlArrows: true,
@@ -35,4 +35,4 @@ $(document).ready(function() {
             }
         }
     });
-});
+};

@@ -1,7 +1,7 @@
-let mobileMode = false;
-let mobileMenuPosition = false;
+export let mobileMode = false;
+export let mobileMenuPosition = false;
 
-function toggleMobileMode() {
+export function toggleMobileMode() {
     if ($(window).width() < 500) {
         mobileMode = true;
     } else {
@@ -9,7 +9,7 @@ function toggleMobileMode() {
     }
 }
 
-function toggleNavBehavior() {
+export function toggleNavBehavior() {
     if (mobileMode) {
         $('nav').removeClass('nav-Ready');
         if (mobileMenuPosition) {
@@ -22,21 +22,21 @@ function toggleNavBehavior() {
     }
 }
 
-function dropMobileMenu() {
+export function dropMobileMenu() {
     $('#nav-Toggle').html('<i class="fas fa-times nav-Toggle"></i>');
     $('nav').addClass('nav-Ready');
     $('#nav-Overlay').css('display', 'block');
     mobileMenuPosition = true;
 }
 
-function liftMobileMenu() {
+export function liftMobileMenu() {
     $('#nav-Toggle').html('<i class="fas fa-bars nav-Toggle"></i>');
     $('nav').removeClass('nav-Ready');
     $('#nav-Overlay').css('display', 'none');
     mobileMenuPosition = false;
 }
 
-$(document).ready(function() {
+export function navbar() {
     toggleMobileMode()
     toggleNavBehavior()
     $(window).on('resize', () => {
@@ -70,4 +70,4 @@ $(document).ready(function() {
             }
         }
     });
-})
+}

@@ -1,14 +1,8 @@
-// You will find more navbar related code in /script/fullpage.js.
+// You will find more navbar-style related code in src/js/fullpage.js
 
+@import "palette";
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700,900");
-
-// Color palette
-$darkest: #0a1612;
-$dark: #1a2930;
-$medium: #29414c;
-$light: #f7ce3e;
-$lightest: #c5c1c0;
 
 @mixin dynamicGradient($color, $amount, $direction: 0deg, $important: false, $image: false) {
     $newColor: $color;

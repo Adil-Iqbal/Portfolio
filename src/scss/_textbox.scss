@@ -1,15 +1,8 @@
+@import "palette";
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700,900");
 
-// Color palette
-$darkest: #0a1612;
-$dark: #1a2930;
-$medium: #29414c;
-$light: #f7ce3e;
-$lightest: #c5c1c0;
-
 // Parent Styling:
-
 %shared-textbox {
     display: flex;
     flex-direction: column;

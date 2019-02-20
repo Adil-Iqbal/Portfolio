@@ -1,3 +1,7 @@
+@import "./palette";
+@import "./backgrounds";
+@import "./textbox";
+
 .section .fp-tableCell {
     display: flex;
     flex-direction: column;
@@ -33,7 +37,7 @@
 
 .project > a > img {
     border-style: solid;
-    border-color: #29414c;
+    border-color: $medium;
     border-width: 2 px; 
     max-width: 100%;
     height: auto;
@@ -52,3 +56,6 @@
     }
 
 }
+
+@import "./navbar";
+@import "./resumeButton";

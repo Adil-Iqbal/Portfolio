@@ -1,9 +1,4 @@
-// Color palette
-$darkest: #0a1612;
-$dark: #1a2930;
-$medium: #29414c;
-$light: #f7ce3e;
-$lightest: #c5c1c0;
+@import "palette";
 
 @mixin scrimGradient($startColor: "black", $stopColor: "white", $direction: "to bottom") {
     $scrimCoordinates: (0: 1, 19: 0.738, 34: 0.541, 47: 0.382, 56.5: 0.278, 65: 0.194, 73: 0.126, 80.2: 0.075, 86.1: 0.042, 91: 0.021, 95.2: 0.008, 98.2: 0.002, 100: 0);
