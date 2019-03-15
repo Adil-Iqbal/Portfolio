@@ -1,8 +1,19 @@
-let path = require('path');
-// let ExtractTextPlugin = require('extract-text-webpack-plugin');
-// let webpack = require('webpack');
-let MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const BANNER = `
 
+Adil Iqbal - Web Developer
+@license GPLv3 for open source use only.
+Copyright (c) 2019 Adil Iqbal.
+
+This page was generated using Webpack. 
+For full and uncompressed source code, please visit:
+https://github.com/Adil-Iqbal/Portfolio/tree/master/src
+
+`
+
+const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
     entry: './src/js/index.js',
@@ -17,8 +28,7 @@ module.exports = {
         overlay: true
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.scss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
@@ -51,7 +61,7 @@ module.exports = {
                     loader: "file-loader",
                     options: {
                         name: "./media/[name].[ext]",
-                        publicPath: function(url) {
+                        publicPath: function (url) {
                             return url.replace('/dist', '');
                         }
                     }
@@ -67,12 +77,16 @@ module.exports = {
         ]
     },
     plugins: [
-        // new webpack.ProvidePlugin({
-        //     $: 'jquery',
-        //     jQuery: 'jquery'
-        // }),
         new MiniCssExtractPlugin({
             filename: "[name].css"
-          })
+        }),
+        new CopyPlugin([{
+                from: 'src/projects',
+                to: 'projects'
+            }
+        ]),
+        new webpack.BannerPlugin({
+            banner: BANNER
+        })
     ]
 };

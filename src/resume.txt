@@ -11,14 +11,16 @@ TECHNICAL PROFILE
 Front-End: HTML5, CSS3, Flexbox, CSSGrid, Javascript, Typscript, Webpack etc.
 Back-End: PHP, JSON, NodeJS, Firebase, Python, Webpack, Gulp etc.
 Frameworks: Bootstrap, Fullpage, p5, Tensorflow, jQuery
-OS: Perferablly Linux and also windows.
+OS: Perferablly Linux. Versed in Windows and MacOS.
+Version Control: Git and Github
 Other technologies: Regex, Adobe Photoshop, Adobe Illustrator, Microsoft Office Suite, etc.
 
 EDUCATION:
 
-Free Code Camp:
-University of Houston:
-Houston Community College:
+Free Code Camp: December 2017 - Present
+11101 Richmond Avenue
+Houston, TX
+
 Ross University:
 
 ENDORSEMENT:
