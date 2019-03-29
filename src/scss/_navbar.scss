@@ -1,8 +1,6 @@
 // You will find more navbar-style related code in src/js/fullpage.js
 
 @import "palette";
-@import url("https://fonts.googleapis.com/css?family=Raleway");
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700,900");
 
 @mixin dynamicGradient($color, $amount, $direction: 0deg, $important: false, $image: false) {
     $newColor: $color;
@@ -108,7 +106,7 @@ nav > ul > li > a {
     cursor: pointer;
 }
 
-@media only screen and (max-width: 499px) {
+@media only screen and (max-width: $mobileWidth) {
     $mobilePadding: 16px;
     $mobileAccentBorderWidth: 12px;
     $toggleButtonSize: 50px;
@@ -186,7 +184,7 @@ nav > ul > li > a {
     }
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: $mobileWidth + 1px) {
     nav {
         top: -30px;
     }

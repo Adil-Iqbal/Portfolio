@@ -1,6 +1,4 @@
 @import "palette";
-@import url("https://fonts.googleapis.com/css?family=Raleway");
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700,900");
 
 // Parent Styling:
 %shared-textbox {
@@ -38,13 +36,13 @@
 
 %shared-contact-icons {
     display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-        height: auto;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto;
 }
 
-@media only screen and (max-width: 499px) {
+@media only screen and (max-width: $mobileWidth) {
     %shared-title {
         $fontsize: 1.5em;
         $letterspacing: $fontsize * 0.15;
@@ -58,6 +56,10 @@
         padding: 15px;
         font-size: 1em;       
         font-weight: 600;
+    }
+
+    %shared-contact-icons {
+        flex-direction: column;
     }
 }
 
@@ -75,8 +77,22 @@ $fgColor: $dark;
         @extend %shared-body;
         color: $fgColor;
         border-color: $fgColor;
-        background: $lightest; 
-      }
+        background: $lightest;
+        img {
+            $imgMargin: 10px;
+            $maxScale: 20%;
+            display: block;
+            width: 40%;
+            height: auto;
+            border-radius: 50%;
+            max-width: $maxScale;
+            max-height: $maxScale;
+            margin-top: $imgMargin;
+            margin-bottom: $imgMargin;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
 }
 
 // Theme-3 Styling:
@@ -122,7 +138,7 @@ $fgColor: $medium;
     }
 }
 
-@media only screen and (max-width: 699px) {
+@media only screen and (max-width: $projectWidth) {
     .tb-theme-4 {
         max-width: 90%;
         .title {
@@ -147,13 +163,28 @@ $fgColor: $medium;
       }
     .contact-icons {
         @extend %shared-contact-icons;
-        a .icon{
-            // @extend %shared-contact-icons;
-            // flex-direction: column;
-            text-align: center;
+        $padding: 16px;
+        a {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: $padding / 2;
+            @media only screen and (max-width: $mobileWidth) {
+                flex-direction: row;
+            }
+
             &:link {
                 color: $lightest;
                 text-decoration: none;
+            }
+            &:visited {
+                color: darken($lightest, 10%);
+                text-decoration: none;
+                &:hover {
+                    color: darken($lightest, 10%);
+                    text-decoration: none;
+                }
             }
             &:hover {
                 color: $light;
@@ -163,10 +194,14 @@ $fgColor: $medium;
                 color: white;
                 text-decoration: none;
             }
-            &:visited * {
-                color: darken($lightest, 10%);
-                text-decoration: none;
-            }
+        }
+        .icon {
+            font-size: 4rem;
+        }
+        .label {
+            font-family: 'Raleway', 'Verdana';
+            font-size: 1.2em;
+            padding: $padding / 2;
         }
     }
 }

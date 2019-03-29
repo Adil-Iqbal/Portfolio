@@ -1,23 +1,14 @@
 // Color palette
-
-// Original
 $darkest: #0a1612;
 $dark: #1a2930;
 $medium: #29414c;
 $light: #f7ce3e;
 $lightest: #c5c1c0;
 
+// Width cut-off
+$mobileWidth: 499px;
+$projectWidth: 699px;
 
-// Reddish
-// $darkest: #2e1114;
-// $dark: #501b1d;
-// $medium: #64485c;
-// $light: #83677b;
-// $lightest: #adadad;
-
-// Tron
-// $darkest: #0b0c10;
-// $dark: #1f2833;
-// $medium: #45a29e;
-// $light: #66fcf1;
-// $lightest: #c5c6c7;
+// Font imports
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700,900");
