@@ -5,7 +5,7 @@
  * @license GPLv3 for open source use only.
  * Copyright (c) 2019 Adil Iqbal.
  * 
- * This page was generated using Webpack. 
+ * This page has been compressed and processed via Webpack. 
  * For full and uncompressed source code, please visit:
  * https://github.com/Adil-Iqbal/Portfolio/tree/master/src
  * 
