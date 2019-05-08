@@ -83,6 +83,10 @@ module.exports = {
         new CopyPlugin([{
                 from: 'src/projects',
                 to: 'projects'
+            },
+            {
+                from: 'src/cover-letter-and-resume.pdf',
+                to: ''
             }
         ]),
         new webpack.BannerPlugin({
