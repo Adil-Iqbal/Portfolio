@@ -68,8 +68,6 @@ function getChannelInfo() {
                 status = "offline";
             }
             $.getJSON(makeURL("channels", login), (data) => {
-                let logo = data.logo != null ? data.logo : "https://dummyimage.com/75x75/ecf0e7/5c5457.jpg&text=%20N/A%20";
-                let name = data.display_name != null ? data.display_name : login;
                 objArray.push({
                     name: data.display_name != null ? data.display_name : login,
                     logo: data.logo != null ? data.logo : "https://dummyimage.com/75x75/ecf0e7/5c5457.jpg&text=%20N/A%20",
