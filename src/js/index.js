@@ -3,8 +3,10 @@ import "../index.html"
 import * as n from "./navbar";
 import * as f from "./fullpage";
 
-ScreenOrientation.lock("portrait-primary");
 $(document).ready(function() {
+    if (!!navigator.userAgent.match(/(android|iphone)/gi)) {
+        screen.orientation.lock("portrait-primary");
+    }
     n.navbar();
     f.startFullpage();
 });
