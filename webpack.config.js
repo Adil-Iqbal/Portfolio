@@ -87,6 +87,34 @@ module.exports = {
             {
                 from: 'src/cover-letter-and-resume.pdf',
                 to: ''
+            },
+            {
+                from: 'src/android-chrome-192x192.png',
+                to: ''
+            },
+            {
+                from: 'src/android-chrome-512x512.png',
+                to: ''
+            },
+            {
+                from: 'src/apple-touch-icon.png',
+                to: ''
+            },
+            {
+                from: 'src/favicon-16x16.png',
+                to: ''
+            },
+            {
+                from: 'src/favicon-32x32.png',
+                to: ''
+            },
+            {
+                from: 'src/favicon.ico',
+                to: ''
+            },
+            {
+                from: 'src/site.webmanifest',
+                to: ''
             }
         ]),
         new webpack.BannerPlugin({
